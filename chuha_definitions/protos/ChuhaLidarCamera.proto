@@ -1,0 +1,202 @@
+PROTO ChuhaLidarCamera[
+    field SFVec3f    translation  0 0 0
+  field SFRotation rotation     0 1 0 0
+  field SFString controller "lidar_camera_controller"
+  field SFString name "ChuhaLidarCamera"
+]
+{
+    Robot {
+  translation IS translation
+  rotation IS rotation
+  children [
+  InertialUnit {
+      translation 0 0.0075 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0.5 0
+            roughness 1
+          }
+          geometry Box {
+            size 0.01 0.005 0.01
+          }
+        }
+      ]
+      boundingObject Shape {
+        appearance PBRAppearance {
+          baseColor 0 0.5 0
+          roughness 1
+        }
+        geometry Box {
+          size 0.01 0.005 0.01
+        }
+      }
+    }
+
+
+    Display {
+      name "extra_display"
+      width 1024
+      height 1024
+    }
+    Lidar {
+      translation 0 0.02 0
+      rotation 0 0.9999999999999999 0 3.14
+      children [
+        DEF LIDAR_SHAPE Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 1
+          }
+          geometry Box {
+            size 0.005 0.005 0.005
+          }
+        }
+      ]
+      boundingObject USE LIDAR_SHAPE
+      physics Physics {
+      }
+      rotationStep 0.262
+      tiltAngle -0.12
+      fieldOfView 0.3
+      verticalFieldOfView 0.3
+      numberOfLayers 16
+      maxRange 6
+      type "rotating"
+    }
+    Camera {
+      translation 0 0 0.03
+      rotation 0 1 0 -3.14
+      children [
+        USE LIDAR_SHAPE
+      ]
+      name "front_camera"
+      boundingObject USE LIDAR_SHAPE
+      physics Physics {
+      }
+      fieldOfView 2
+      width 256
+      height 256
+      far 10
+    }
+    Camera {
+      translation 0 0 -0.03
+      children [
+        USE LIDAR_SHAPE
+      ]
+      name "rear_camera"
+      boundingObject USE LIDAR_SHAPE
+      physics Physics {
+      }
+      fieldOfView 2
+      width 256
+      height 256
+      far 10
+    }
+    DEF CHASSIS_GROUP Group {
+      children [
+        Transform {
+          translation 0 0.0125 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.5 0.5 0.5
+                roughness 0.5
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.0025
+              }
+            }
+          ]
+        }
+        DEF CHASSIS_SHAPE Shape {
+          appearance PBRAppearance {
+            baseColor 0.7 0 0
+            metalness 0.7
+          }
+          geometry Cylinder {
+            height 0.0148
+            radius 0.03
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 15509.328167523308
+        anchor 0.035 0 0
+      }
+      device [
+        PositionSensor {
+          name "left motor sensor"
+        }
+        RotationalMotor {
+          name "left motor"
+          maxVelocity 60
+          maxTorque 0.05
+        }
+      ]
+      endPoint Solid {
+        translation 0.034999999740545906 4.441317810577016e-05 3.3220518961824615e-05
+        rotation -0.5145628085168344 0.5145646983648784 0.685892329223712 1.9392063890708489
+        children [
+          DEF WHEEL_SHAPE Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.005
+              radius 0.0075
+            }
+          }
+        ]
+        name "LeftWheelSolid"
+        boundingObject USE WHEEL_SHAPE
+        physics DEF WHEEL_PHY Physics {
+          mass 0.05
+        }
+        linearVelocity -4.73758806586831e-14 -5.329922243970475e-17 3.2517204535840234e-12
+        angularVelocity 4.782665303418598e-10 9.831708220638956e-11 9.424226300844859e-11
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 12142.621981233602
+        anchor -0.055 0 0
+      }
+      device [
+        PositionSensor {
+          name "right motor sensor"
+        }
+        RotationalMotor {
+          name "right motor"
+          maxVelocity 60
+          maxTorque 0.05
+        }
+      ]
+      endPoint Solid {
+        translation -0.03500000038240844 -4.006410831159118e-05 -3.79618322983081e-05
+        rotation -0.37995902000756615 0.3799600802457111 -0.8433631960991437 4.542846992722221
+        children [
+          USE WHEEL_SHAPE
+        ]
+        name "RightWheelSolid"
+        boundingObject USE WHEEL_SHAPE
+        physics USE WHEEL_PHY
+        linearVelocity 1.2849540122794136e-12 1.4210429149900828e-16 -3.4575087257549416e-12
+        angularVelocity -5.524789169315991e-10 9.708295955206789e-11 -1.0918609784069085e-10
+      }
+    }
+  ]
+  name IS name
+  boundingObject USE CHASSIS_GROUP
+  physics Physics {
+    mass 0.3
+  }
+  controller IS controller
+  linearVelocity 6.232266328806033e-13 -2.0166048513873838e-14 -1.2471853620901518e-13
+  angularVelocity 6.776746323111518e-13 9.773333527674542e-11 2.2766058360531475e-14
+}
+}

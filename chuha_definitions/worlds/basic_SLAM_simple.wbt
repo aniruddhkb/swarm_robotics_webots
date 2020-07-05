@@ -1,0 +1,114 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  basicTimeStep 8
+}
+Viewpoint {
+  orientation 0.695070210373469 0.6648469587294146 0.27359810693721814 5.214069735189197
+  position -1.9434776221183236 3.3414517338984457 1.8668274585170996
+  follow "ChuhaLidarCamera"
+  followType "None"
+}
+ChuhaLidarCamera {
+  translation 0 0.00745745 0
+  rotation 0.8993227872811103 0.05243769369644895 -0.4341299489285811 0.0021304586221610115
+  controller "basic_SLAM_simple"
+}
+TexturedBackground {
+  texture "mars"
+}
+TexturedBackgroundLight {
+  texture "mars"
+}
+RectangleArena {
+  floorSize 5 5
+  floorTileSize 2 2
+  wallHeight 0.5
+}
+Wall {
+  translation -2 0 -1.5
+  size 1 0.5 0.1
+}
+Wall {
+  translation -0.5 0 -2
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(1)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation 1 0 -1.5
+  rotation 0 1 0 3.14159
+  name "wall(2)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation 1 0 -0.5
+  rotation 0 1 0 3.14159
+  name "wall(4)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation 1.45 0 5.09809e-08
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(5)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation -0.44 0 1.9783e-06
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(6)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation -1.55 0 3.11046e-06
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(8)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation -1.55 0 2
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(10)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation 0.45 0 2
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(11)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation 0.45 0 1
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(12)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation -3.52079e-14 0 1.5
+  rotation 0 1 0 3.14159
+  name "wall(13)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation 1 0 1.5
+  rotation 0 1 0 3.14159
+  name "wall(14)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation -2 0 0.450003
+  rotation 0 1 0 1.01503e-06
+  name "wall(9)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation 7.96081e-08 0 0.470002
+  rotation 0 1 0 3.14159
+  name "wall(7)"
+  size 1 0.5 0.1
+}
+Wall {
+  translation 2 0 -1.5
+  rotation 0 1 0 3.14159
+  name "wall(3)"
+  size 1 0.5 0.1
+}

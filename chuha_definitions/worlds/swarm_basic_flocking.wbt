@@ -1,0 +1,109 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  basicTimeStep 8
+  optimalThreadCount 8
+}
+Viewpoint {
+  orientation -0.08021439676849733 -0.7715292878781742 -0.6311166362070193 2.9460962251384144
+  position 0.6139336388792973 4.443456552992334 -0.5434339637706331
+}
+TexturedBackground {
+  texture "empty_office"
+}
+TexturedBackgroundLight {
+  texture "empty_office"
+}
+Floor {
+  appearance Parquetry {
+    type "light strip"
+  }
+}
+ChuhaLidarCamera {
+  translation 0.43 0 -0.25
+  controller "swarm_basic_flocking"
+}
+ChuhaLidarCamera {
+  translation 0.09 0 0.1
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(1)"
+}
+ChuhaLidarCamera {
+  translation 0.62 0 0.2
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(2)"
+}
+ChuhaLidarCamera {
+  translation 0.36 0 0.93
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(3)"
+}
+ChuhaLidarCamera {
+  translation 0.18 0 0.4
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(4)"
+}
+ChuhaLidarCamera {
+  translation 0.74 0 -0.15
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(5)"
+}
+ChuhaLidarCamera {
+  translation 0.73 0 0.6
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(6)"
+}
+ChuhaLidarCamera {
+  translation 0.7 0 1
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(7)"
+}
+ChuhaLidarCamera {
+  translation 1.14 0 0.8
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(8)"
+}
+ChuhaLidarCamera {
+  translation 1.39 0 1.13
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(9)"
+}
+ChuhaLidarCamera {
+  translation 1.77 0 0.84
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(10)"
+}
+ChuhaLidarCamera {
+  translation 2.02 0 0.38
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(11)"
+}
+ChuhaLidarCamera {
+  translation 1.57 0 0.48
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(12)"
+}
+ChuhaLidarCamera {
+  translation 1.3 0 0.26
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(13)"
+}
+ChuhaLidarCamera {
+  translation 1.57 0 -0.07
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(14)"
+}
+ChuhaLidarCamera {
+  translation 1.08 0 0.16
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(15)"
+}
+ChuhaLidarCamera {
+  translation 1.18 0 -0.32
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(16)"
+}
+ChuhaLidarCamera {
+  translation 1.28 0 -0.22
+  controller "swarm_basic_flocking"
+  name "ChuhaLidarCamera(17)"
+}

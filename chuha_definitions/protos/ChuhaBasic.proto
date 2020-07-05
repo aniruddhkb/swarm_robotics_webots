@@ -1,0 +1,116 @@
+PROTO ChuhaBasic[
+    field SFVec3f    translation  0 0 0
+  field SFRotation rotation     0 1 0 0
+  field SFString controller "teleoperator"
+  field SFString name "ChuhaBasic"
+]
+{
+    Robot {
+  translation IS translation
+  rotation IS rotation
+  children [
+  InertialUnit {
+      translation 0 0.0075 0
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0.5 0
+            roughness 1
+          }
+          geometry Box {
+            size 0.01 0.005 0.01
+          }
+        }
+      ]
+      boundingObject Shape {
+        appearance PBRAppearance {
+          baseColor 0 0.5 0
+          roughness 1
+        }
+        geometry Box {
+          size 0.01 0.005 0.01
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 12111.798766791255
+        anchor 0.035 0 0
+      }
+      device [
+        PositionSensor {
+          name "left motor sensor"
+        }
+        RotationalMotor {
+          name "left motor"
+          maxVelocity 60
+          maxTorque 0.05
+        }
+      ]
+      endPoint Solid {
+        translation 0.035 0 0
+        rotation 0.4299887497348286 -0.4299903291745988 0.7938627034429816 1.7996212937721852
+        children [
+          DEF WHEEL_SHAPE Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.005
+              radius 0.0075
+            }
+          }
+        ]
+        name "LeftWheelSolid"
+        boundingObject USE WHEEL_SHAPE
+        physics DEF WHEEL_PHY Physics {
+          mass 0.05
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 8452.243064935557
+        anchor -0.055 0 0
+      }
+      device [
+        PositionSensor {
+          name "right motor sensor"
+        }
+        RotationalMotor {
+          name "right motor"
+          maxVelocity 60
+          maxTorque 0.05
+        }
+      ]
+      endPoint Solid {
+        translation -0.03500000000000002 0 0
+        rotation 0.07055549579599536 -0.0705557549612782 -0.9950094509374396 4.707382284657794
+        children [
+          USE WHEEL_SHAPE
+        ]
+        name "RightWheelSolid"
+        boundingObject USE WHEEL_SHAPE
+        physics USE WHEEL_PHY
+      }
+    }
+    DEF CHASSIS_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0.7 0 0
+        metalness 0.7
+      }
+      geometry Cylinder {
+        height 0.0149
+        radius 0.03
+      }
+    }
+  ]
+  name IS name
+  boundingObject USE CHASSIS_SHAPE
+  physics Physics {
+  }
+  controller IS controller
+}
+}
