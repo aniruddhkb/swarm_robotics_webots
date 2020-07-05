@@ -4,14 +4,15 @@ WorldInfo {
   optimalThreadCount 8
 }
 Viewpoint {
-  orientation -0.08021439676849733 -0.7715292878781742 -0.6311166362070193 2.9460962251384144
-  position 0.6139336388792973 4.443456552992334 -0.5434339637706331
+  orientation -0.00640466211476514 -0.9207985416405503 -0.3899859305357454 3.1113507725370626
+  position 0.7727216886750466 2.6628318152429777 -2.2791277759329707
 }
 TexturedBackground {
   texture "empty_office"
 }
 TexturedBackgroundLight {
   texture "empty_office"
+  luminosity 20
 }
 Floor {
   appearance Parquetry {
