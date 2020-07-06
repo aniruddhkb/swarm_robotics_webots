@@ -8,7 +8,7 @@ orthographicViewHeight: 1
 textFiles: -1
 globalOptionalRendering: ContactPoints::CoordinateSystem::LidarPointClouds
 consoles: Console:All:All
-renderingDevicePerspectives: ChuhaCameraLidar:camera;1;1;0;0
-renderingDevicePerspectives: ChuhaCameraLidar:rear_camera;0;1;0;0
 renderingDevicePerspectives: ChuhaCameraLidar:extra_display;0;0.276367;0;0
 renderingDevicePerspectives: ChuhaCameraLidar:front_camera;0;1.00391;0;0.0603589
+renderingDevicePerspectives: ChuhaCameraLidar:camera;1;1;0;0
+renderingDevicePerspectives: ChuhaCameraLidar:rear_camera;0;1;0;0
