@@ -1,4 +1,6 @@
 # swarm_robotics_webots
+[Image](https://github.com/aniruddhkb/swarm_robotics_webots/raw/master/Screenshot.png)
+
 This is a repo containing my work in implementing common swarm robotics algorithms using the Webots simulator.
 
 This has been tested on Webots R2020b Nightly Build 26/6/2020. Hopefully, this should work on your system as well.
