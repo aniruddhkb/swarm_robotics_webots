@@ -1,5 +1,5 @@
 # swarm_robotics_webots
-[Image](https://github.com/aniruddhkb/swarm_robotics_webots/raw/master/Screenshot.png)
+![Image](https://github.com/aniruddhkb/swarm_robotics_webots/raw/master/Screenshot.png)
 
 This is a repo containing my work in implementing common swarm robotics algorithms using the Webots simulator.
 
