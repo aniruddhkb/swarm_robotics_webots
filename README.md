@@ -43,4 +43,6 @@ generated (in a very basic way), but the data is not used
 in any way.
 
 swarm_basic_flocking: My first swarm algorithm. Flocking 
-without any care for collisions.
+without any care for collisions. For now, I will be implementing the algorithms using LIDAR, so that I have precise data. Later on, I will implement them using an IR skirt or SONAR skirt. Uses the swarm_basic_flocking controller.
+
+swarm_flocking_anticollision: Same as swarm_basic_flocking, but with some element of collision avoidance. Uses the swarm_flocking_anticollision controller.
