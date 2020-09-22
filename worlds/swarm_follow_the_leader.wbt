@@ -1,0 +1,124 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  basicTimeStep 8
+  optimalThreadCount 8
+}
+Viewpoint {
+  orientation 0.5282754655954158 0.7258902119335593 0.44046388350124566 4.574263209388246
+  position -2.579815765451963 5.264706901836948 1.8303060432112992
+  follow "ChuhaLidarCamera"
+  followType "None"
+}
+TexturedBackground {
+  texture "empty_office"
+}
+TexturedBackgroundLight {
+  texture "empty_office"
+}
+Floor {
+  appearance Parquetry {
+    type "light strip"
+  }
+}
+ChuhaBasic {
+  translation -0.5 0.08 -0.5
+}
+ChuhaLidarCamera {
+  translation 0 0.00767573 0
+  controller "swarm_flocking_anticollision"
+}
+ChuhaLidarCamera {
+  translation 0.5 0.00791453 0
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(1)"
+}
+ChuhaLidarCamera {
+  translation 1 0.00779233 0
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(2)"
+}
+ChuhaLidarCamera {
+  translation 1.5 0.00781044 0
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(3)"
+}
+ChuhaLidarCamera {
+  translation 0 0.0078126 0.5
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(4)"
+}
+ChuhaLidarCamera {
+  translation 0.5 0.00770142 0.5
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(5)"
+}
+ChuhaLidarCamera {
+  translation 1 0.00743914 0.5
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(6)"
+}
+ChuhaLidarCamera {
+  translation 1.5 0.00782482 0.5
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(7)"
+}
+ChuhaLidarCamera {
+  translation 0 0.00782658 1
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(8)"
+}
+ChuhaLidarCamera {
+  translation 0.5 0.00775592 1
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(9)"
+}
+ChuhaLidarCamera {
+  translation 1 0.00760529 1
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(10)"
+}
+ChuhaLidarCamera {
+  translation 1.5 0.00753866 1
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(11)"
+}
+ChuhaLidarCamera {
+  translation 0 0.00761535 1.5
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(12)"
+}
+ChuhaLidarCamera {
+  translation 0.5 0.00748898 1.5
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(13)"
+}
+ChuhaLidarCamera {
+  translation 1 0.00747851 1.5
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(14)"
+}
+ChuhaLidarCamera {
+  translation 1.5 0.00740551 1.5
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(15)"
+}
+ChuhaLidarCamera {
+  translation 0 0.00765684 2
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(16)"
+}
+ChuhaLidarCamera {
+  translation 0.5 0.00759428 2
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(17)"
+}
+ChuhaLidarCamera {
+  translation 1 0.00765082 2
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(18)"
+}
+ChuhaLidarCamera {
+  translation 1.5 0.00740543 2
+  controller "swarm_flocking_anticollision"
+  name "ChuhaLidarCamera(19)"
+}

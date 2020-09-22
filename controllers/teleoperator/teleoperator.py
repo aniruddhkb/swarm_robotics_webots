@@ -4,7 +4,7 @@ from controller import Robot, Motor, PositionSensor, Keyboard, DistanceSensor
 
 #INITIALIZATION CODE HERE.
 
-VELOCITY = 30
+VELOCITY = 60
 
 #ROBOT INITIALIZATION
 robot = Robot()
